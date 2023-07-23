@@ -1,0 +1,16 @@
+.convert-button {
+    display: inline-block;
+    height: 45px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: green;
+    border: 0;
+    font-size: large;
+    font-weight: bold;
+    color: white;
+}
+
+.convert-button:hover {
+    background-color: limegreen;
+    cursor: pointer;
+}

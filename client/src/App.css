@@ -1,0 +1,17 @@
+.App {
+    display: flex; 
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.main-wrapper {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.aside-wrapper {
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
