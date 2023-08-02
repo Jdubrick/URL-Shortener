@@ -1,13 +1,17 @@
 .convert-button {
     display: inline-block;
-    height: 45px;
+    height: 55px;
     width: 200px;
     border-radius: 10px;
-    background-color: green;
+    background-color: #EEEEEE;
     border: 0;
-    font-size: large;
-    font-weight: bold;
-    color: white;
+    color: #2F3E46;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    border: 1px solid #2F3E46;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
 }
 
 .convert-button:hover {

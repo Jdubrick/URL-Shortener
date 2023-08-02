@@ -1,17 +1,23 @@
 .App {
-    display: flex; 
-    justify-content: space-between;
     height: 100vh;
+    overflow-y: scroll;
 }
 
-.main-wrapper {
-    display: flex;
+.content {
+    display: flex; 
+    flex-direction: column;
     align-items: center;
-    width: 50%;
+    gap: 61px;
+    padding-top: 61px;
+    padding-bottom: 61px;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.aside-wrapper {
-    display: flex;
-    align-items: center;
-    width: 40%;
+@media only screen and (max-width: 600px) {
+    .content {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
 }

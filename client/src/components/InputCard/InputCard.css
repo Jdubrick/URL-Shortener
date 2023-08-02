@@ -1,13 +1,82 @@
 .input-card {
+    width: 500px;
+    height: 250px;
+    background-color: #FB5607;
+    box-shadow: 3px 6px 6px 0px;
+    opacity: 70%;
+    border-radius: 4px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: x-large;
+    display: flex;
+    align-items: stretch;
+}
+
+@media only screen and (max-width: 600px) {
+    .responsive {
+        width: 85%;
+        height: 250px;
+    }
+}
+
+.card-wrapper {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    width: 100%;
+
+}
+
+.input-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 5px;
-    width: 100%;
-    height: 300px;
-    background-color: lightgray;
-    border-radius: 10px;
+    gap: 20px;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.shortened-url {
+    margin-top: 30px;
+}
+
+.hostname-alias-input {
+    display: flex;
+    gap: 2px;
+    width: 487px;
+}
+
+@media only screen and (max-width: 600px) {
+    .hostname-alias-input {
+        width: 90%;
+    }
+    
+}
+
+.alias-box {
+    height: 40px;
+    font-size: large;
     padding: 5px;
-    font-size: x-large;
+    border-radius: 10px;
+    color: #2F3E46;
+    border: 1px solid #2F3E46;
+    background-color: #EEEEEE;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.80); 
+}
+
+.hostname {
+    width: 45%;
+}
+
+.alias {
+    width: 55%;
 }
