@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./InputCard.css";
 import InputBox from "../InputBox/InputBox";
 import ConvertButton from "../ConvertButton/ConvertButton";
 
-const InputCard = ({ generatedShortUrl, setGeneratedShortUrl }) => {
+const InputCard = ({ setGeneratedShortUrl }) => {
   const [userLongUrl, setUserLongUrl] = useState("");
   const [userUrlAlias, setUserUrlAlias] = useState("");
-  const [success, setSuccess] = useState(false);
 
   const handleUserUrlAliasChange = (e) => {
     setUserUrlAlias(e.target.value);
@@ -17,7 +16,6 @@ const InputCard = ({ generatedShortUrl, setGeneratedShortUrl }) => {
   };
 
   const handleShortUrlChange = (e) => {
-    setSuccess(true);
     setGeneratedShortUrl(e);
   };
 

@@ -1,10 +1,9 @@
 import React from "react";
 import "./ConvertButton.css";
-import { sendUserUrlToServer } from "../../api/utils";
 import axios from "axios";
 
-const ConvertButton = ({ longUrl, urlAlias, updateShortUrl, wasSuccess }) => {
-  const handleClick = (e) => {
+const ConvertButton = ({ longUrl, urlAlias, updateShortUrl }) => {
+  const handleClick = () => {
     axios
       .post(
         "http://localhost:5000/api/url",
