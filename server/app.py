@@ -1,4 +1,4 @@
-from flask import Flask, redirect, request
+from flask import Flask, redirect, request, url_for
 from flask_pymongo import pymongo
 from flask_cors import CORS
 from dotenv import load_dotenv
@@ -21,12 +21,14 @@ def create_url():
     data = request.json
     user_entered_url = data['url']
     user_entered_name = data['name']
+    base_url = url_for('create_url', _external=True)
+
     if validators.url(user_entered_url): # Must in the form http(s)://<link>
         if utils.validate_name(collection, user_entered_name):
             collection.insert_one(utils.generate_url_insert(user_entered_name, user_entered_url))
         else:
             return {"message": "Name already in use"}, 400 # Should be an error stating the user entered name was already in use
-        return utils.generate_return_url(user_entered_name) # 201 ok stating the link is good to go, should be returning their short link
+        return utils.generate_return_url(user_entered_name, base_url) # 201 ok stating the link is good to go, should be returning their short link
     else:
         return {"message": "Invalid URL, link must be in the form http:// or https://"}, 400 # Should be an error stating the link was invalid
 
@@ -37,4 +39,5 @@ def redirect_url(url_id):
         return redirect(result['url'])
     
     return {"message": "Invalid short URL"}, 404
+
 
