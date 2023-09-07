@@ -1,4 +1,5 @@
 import datetime
+import requests
 
 def validate_name(collection, parameter):
     result = collection.find({"url_id": parameter})
@@ -19,3 +20,6 @@ def generate_return_url(user_entered_name, base_url):
         "message": "URL created successfuly",
         "url": f"{base_url}/{user_entered_name}"
     }, 201
+
+def get_google_provider(url):
+    return requests.get(url).json()
